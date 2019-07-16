@@ -39,7 +39,7 @@ accuracy=tf.reduce_mean(tf.cast(correct_pred,tf.float32))
 saver=tf.train.Saver()
 
 with tf.Session() as sess:
-    saver.restore(sess, "tmp/model.ckpt")
+    saver.restore(sess, "data/model/model.ckpt")
     print("Acc is",sess.run(accuracy,feed_dict={X:mnist.test.images[0:59],Y:mnist.test.labels[0:59]}))
     while(True):
         path=input("file:")
