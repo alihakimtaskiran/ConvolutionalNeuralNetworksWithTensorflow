@@ -57,5 +57,5 @@ with tf.Session() as sess:
     print("Iteration",i,"Accuracy="+str(acc),"Cross Entropy Loss="+str(x_l),"Mean Squared Error="+str(l2_l))
     test_acc,test_x,test_l=sess.run([accuracy,xent,l2],feed_dict={X:mnist.test.images,Y:mnist.test.labels})
     print("Train Accuracy="+str(acc),"Cross Entropy Loss="+str(x_l),"Mean Squared Error="+str(l2_l),"\n\n")
-    save_path = saver.save(sess, "tmp/model.ckpt")
+    save_path = saver.save(sess, "data/model/model.ckpt")
     print("Model saved in path: %s" % save_path)
